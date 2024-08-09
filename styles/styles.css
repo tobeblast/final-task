@@ -1,0 +1,210 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section{
+  overflow-x: hidden!important;
+}
+
+
+nav{
+ background-color: rgb(49, 53, 61);
+ position: fixed!important;
+ top: 0;
+ z-index: 1000;
+ width: 100%;
+}
+
+nav a{
+  color: rgb(255, 255, 255) !important;
+}
+
+nav a:hover {
+  color: rgb(252, 188, 178) !important;
+}
+
+.logo{
+  font-size: 60px;
+}
+
+nav ul{
+  margin-left: 18%;
+}
+
+
+.hero-div{
+  background-color: rgb(40, 41, 46);
+}
+
+.hero{
+  padding: 30px 25%;
+}
+
+.hero .text h1{
+  font-family: "Lora", sans-serif;
+  letter-spacing: 10px;
+  font-weight: 100;
+  font-size: 64px;
+}
+
+.shop-now {
+  background-color: rgb(252, 188, 178);
+    color: black;
+  cursor: pointer;
+  border: 0;
+  font-family: "Lora", sans-serif;
+  padding: 10px 40px;
+}
+
+.shop-now:hover {
+  background-color: black;
+  color: rgb(252, 188, 178);
+  border: 2px solid;
+  border-color: rgb(252, 188, 178);
+}
+
+i{
+ cursor: pointer;
+}
+
+.feature-div{
+  background-color: rgb(40, 41, 46);
+}
+
+.feature .card{
+  cursor: pointer;
+}
+
+.feature .card:hover{
+  scale: 1.06;
+}
+
+.best h1{
+  font-family: "Lora", sans-serif;
+  letter-spacing: 10px;
+  font-weight: 100;
+  font-size: 30px;
+  color: rgb(80, 83, 90);
+}
+
+.all button{
+  color: white;
+  background-color: rgb(49, 53, 61);
+  cursor: pointer;
+  border: 0;
+  font-family: "Lora", sans-serif;
+  padding: 10px 40px;
+}
+
+.all button:hover{
+  background-color: white;
+  color: rgb(49, 53, 61);
+  border: 2px solid;
+  border-color: rgb(49, 53, 61);
+}
+
+.best .card:hover{
+  scale: 0;
+}
+
+.add-cart button {
+  color: white;
+  background-color: rgb(49, 53, 61);
+  cursor: pointer;
+  border: 0;
+  font-family: "Lora", sans-serif;
+  padding: 10px 40px;
+}
+
+.add-cart button:hover {
+  background-color: white;
+  color: rgb(49, 53, 61);
+  border: 2px solid;
+  border-color: rgb(49, 53, 61);
+}
+
+footer{
+ background-color: rgb(49, 53, 61);
+}
+
+.contact h1{
+  font-family: "Lora", sans-serif;
+}
+
+.contact input,
+textarea {
+  border: 0px !important;
+  outline: 0px !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid white !important;
+  padding-bottom: 3px !important;
+  margin-bottom: 10px !important;
+  font-family: "Lora", sans-serif;
+}
+
+.send button {
+  color: rgb(49, 53, 61);
+  background-color: white;
+  cursor: pointer;
+  border: 0;
+  font-family: "Lora", sans-serif;
+  padding: 10px 40px;
+}
+
+.send button:hover {
+  background-color: rgb(49, 53, 61);
+  color: white;
+  border: 2px solid;
+  border-color: white;
+}
+
+
+
+
+@media(max-width:768px){
+  .hero .text h1 {
+    font-size: 30px;
+  }
+
+  nav ul {
+    margin-left: 0;
+  }
+}
+
+@media(max-width:500px){
+  .hero{
+    flex-direction: column-reverse;
+    padding-top: 0;
+    row-gap: 20px;
+  }
+
+  .hero .text{
+   width: 100%!important;
+   text-align: center;
+  }
+
+  .hero .image{
+   width: 100%!important;
+  }
+
+  .feature{
+    flex-direction: column;
+  }
+
+  .best{
+    text-align: center;
+  }
+
+  .categories{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .categories .card{
+    width: 100%!important;
+  }
+}
+
