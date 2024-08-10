@@ -3,12 +3,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Lora", sans-serif;
 }
 
 section{
   overflow-x: hidden!important;
 }
-
 
 nav{
  background-color: rgb(49, 53, 61);
@@ -44,7 +44,6 @@ nav ul{
 }
 
 .hero .text h1{
-  font-family: "Lora", sans-serif;
   letter-spacing: 10px;
   font-weight: 100;
   font-size: 64px;
@@ -55,7 +54,6 @@ nav ul{
     color: black;
   cursor: pointer;
   border: 0;
-  font-family: "Lora", sans-serif;
   padding: 10px 40px;
 }
 
@@ -83,7 +81,6 @@ i{
 }
 
 .best h1{
-  font-family: "Lora", sans-serif;
   letter-spacing: 10px;
   font-weight: 100;
   font-size: 30px;
@@ -95,7 +92,6 @@ i{
   background-color: rgb(49, 53, 61);
   cursor: pointer;
   border: 0;
-  font-family: "Lora", sans-serif;
   padding: 10px 40px;
 }
 
@@ -115,7 +111,6 @@ i{
   background-color: rgb(49, 53, 61);
   cursor: pointer;
   border: 0;
-  font-family: "Lora", sans-serif;
   padding: 10px 40px;
 }
 
@@ -130,10 +125,6 @@ footer{
  background-color: rgb(49, 53, 61);
 }
 
-.contact h1{
-  font-family: "Lora", sans-serif;
-}
-
 .contact input,
 textarea {
   border: 0px !important;
@@ -142,7 +133,6 @@ textarea {
   border-bottom: 2px solid white !important;
   padding-bottom: 3px !important;
   margin-bottom: 10px !important;
-  font-family: "Lora", sans-serif;
 }
 
 .send button {
@@ -150,7 +140,6 @@ textarea {
   background-color: white;
   cursor: pointer;
   border: 0;
-  font-family: "Lora", sans-serif;
   padding: 10px 40px;
 }
 
@@ -161,7 +150,37 @@ textarea {
   border-color: white;
 }
 
+.cart h4{
+  font-weight: 200;
+}
 
+.add{
+  height: 30px;
+}
+
+.check-btn button{
+  color: white;
+  background-color: rgb(49, 53, 61);
+  cursor: pointer;
+  border: 0;
+  padding: 10px 40px;
+  width: 100%;    
+}
+
+.check-btn button:hover {
+  background-color: white;
+  color: rgb(49, 53, 61);
+  border: 2px solid;
+  border-color: rgb(49, 53, 61);
+}
+
+.my-cart{
+  width: 65%;
+}
+
+.summary{
+  width: 30%;
+}
 
 
 @media(max-width:768px){
@@ -171,6 +190,18 @@ textarea {
 
   nav ul {
     margin-left: 0;
+  }
+
+  .cart{
+    flex-direction: column;
+  }
+
+  .my-cart{
+    width: 100%;
+  }
+
+  .summary{
+    width: 100%;
   }
 }
 
@@ -205,6 +236,15 @@ textarea {
 
   .categories .card{
     width: 100%!important;
+  }
+
+  .image-price-div{
+    flex-direction: column;
+    /* row-gap: 20px; */
+  }
+
+  .image-price{
+    flex-direction: column;
   }
 }
 
