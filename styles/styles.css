@@ -1,4 +1,4 @@
-
+/* General Styling */
 *{
   padding: 0;
   margin: 0;
@@ -34,7 +34,40 @@ nav ul{
   margin-left: 18%;
 }
 
+i {
+  cursor: pointer;
+}
 
+footer {
+  background-color: rgb(49, 53, 61);
+}
+
+.contact input,
+textarea {
+  border: 0px !important;
+  outline: 0px !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid white !important;
+  padding-bottom: 3px !important;
+  margin-bottom: 10px !important;
+}
+
+.send button {
+  color: rgb(49, 53, 61);
+  background-color: white;
+  cursor: pointer;
+  border: 0;
+  padding: 10px 40px;
+}
+
+.send button:hover {
+  background-color: rgb(49, 53, 61);
+  color: white;
+  border: 2px solid;
+  border-color: white;
+}
+
+/* Index Styling */
 .hero-div{
   background-color: rgb(40, 41, 46);
 }
@@ -51,7 +84,7 @@ nav ul{
 
 .shop-now {
   background-color: rgb(252, 188, 178);
-    color: black;
+  color: black;
   cursor: pointer;
   border: 0;
   padding: 10px 40px;
@@ -62,10 +95,6 @@ nav ul{
   color: rgb(252, 188, 178);
   border: 2px solid;
   border-color: rgb(252, 188, 178);
-}
-
-i{
- cursor: pointer;
 }
 
 .feature-div{
@@ -106,6 +135,8 @@ i{
   scale: 0;
 }
 
+/* Add to cart button */
+
 .add-cart button {
   color: white;
   background-color: rgb(49, 53, 61);
@@ -121,35 +152,7 @@ i{
   border-color: rgb(49, 53, 61);
 }
 
-footer{
- background-color: rgb(49, 53, 61);
-}
-
-.contact input,
-textarea {
-  border: 0px !important;
-  outline: 0px !important;
-  background-color: transparent !important;
-  border-bottom: 2px solid white !important;
-  padding-bottom: 3px !important;
-  margin-bottom: 10px !important;
-}
-
-.send button {
-  color: rgb(49, 53, 61);
-  background-color: white;
-  cursor: pointer;
-  border: 0;
-  padding: 10px 40px;
-}
-
-.send button:hover {
-  background-color: rgb(49, 53, 61);
-  color: white;
-  border: 2px solid;
-  border-color: white;
-}
-
+/* Cart styling */
 .cart h4{
   font-weight: 200;
 }
@@ -174,6 +177,7 @@ textarea {
   border-color: rgb(49, 53, 61);
 }
 
+/* cart and checkout styling */
 .my-cart, .billing{
   width: 65%;
 }
@@ -182,6 +186,7 @@ textarea {
   width: 30%;
 }
 
+/* checkout styling */
 .billing-div input{
   border: 0px !important;
   outline: 0px !important;
@@ -211,6 +216,7 @@ textarea {
   border-color: rgb(49, 53, 61);
 }
 
+/* Product styling */
 .left-product img:hover{
   border: 2px solid;
   cursor: pointer;
@@ -233,14 +239,15 @@ textarea {
 
 
 @media(max-width:768px){
-  .hero .text h1 {
-    font-size: 30px;
-  }
 
   nav ul {
     margin-left: 0;
   }
 
+  .hero .text h1 {
+    font-size: 30px;
+  }
+  
   .cart{
     flex-direction: column;
   }
@@ -282,11 +289,6 @@ textarea {
     text-align: center;
   }
 
-  .categories{
-    flex-direction: column;
-    row-gap: 30px;
-  }
-
   .categories .card{
     width: 100%!important;
   }
@@ -310,6 +312,10 @@ textarea {
 
   .payment{
     width: 100%;
+  }
+
+  .product-div{
+    flex-direction: column;
   }
 }
 
