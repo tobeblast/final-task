@@ -30,11 +30,14 @@
     />
   </head>
   <body>
+    <!-- Header -->
     <header>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light pt-3 text-white">
         <div class="container text-white">
-          <a class="logo navbar-brand" href="#">DIVINE</a>
+          <a class="logo navbar-brand" href="../index.html">DIVINE</a>
+
+          <!-- Toggle Button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -46,16 +49,26 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- Navigation Item -->
+
           <div
             class="collapse navbar-collapse ms-lg-5 text-white"
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
               <li class="nav-item mx-lg-3">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="../index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item mx-lg-3">
-                <a class="nav-link" aria-current="page" href="#">Shop</a>
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="./product-page.html"
+                  >Shop</a
+                >
               </li>
               <li class="nav-item mx-lg-3">
                 <a class="nav-link" aria-current="page" href="#">About</a>
@@ -84,17 +97,22 @@
     <main>
       <div class="container my-5">
         <h2 class="pt-4 ps-4">Checkout</h2>
+
+        <!-- Check-out Form -->
         <form id="checkout-form">
           <div
             class="billing-div d-flex align-item-center justify-content-between"
           >
+            <!-- Billing and Shipping Section -->
             <div class="billing">
+              <!-- Billing Section -->
               <h4>Billing Information</h4>
               <input type="text" placeholder="billing-name" required /><br />
               <input type="text" placeholder="billing-address" required /><br />
               <input type="email" placeholder="billing-email" required /><br />
               <input type="tel" placeholder="billing-phone" required />
 
+              <!-- Shipping Section -->
               <h4 class="mt-4">Shipping Information</h4>
               <input type="checkbox" class="checkbox" id="same-as-billing" />
               <label for="same-as-billing">Same as Billing Information</label>
@@ -105,13 +123,16 @@
                 <input type="tel" placeholder="shipping-phone" />
               </div>
             </div>
+
+            <!-- Payment and Summary Section -->
             <div class="payment">
+              <!-- Payment Section -->
               <h4>Payment Information</h4>
               <input type="text" placeholder="card-number" required />
               <input type="text" placeholder="expiry-date" required />
-
               <input type="text" placeholder="cvv" required />
 
+              <!-- Summary Section -->
               <h4>Order Summary</h4>
               <div id="order-summary">
                 <p>Product 1: $10.00</p>
@@ -192,7 +213,7 @@
           </form>
         </div>
 
-        <!-- Social media link -->
+        <!-- Social media icons -->
         <div
           class="social-media d-flex align-item-center justify-content-center gap-5 mt-4 text-white pb-4"
         >
