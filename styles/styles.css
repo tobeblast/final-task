@@ -211,68 +211,25 @@ textarea {
   border-color: rgb(49, 53, 61);
 }
 
-
-/* ////checkout */
-
-/* .container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-h1,
-h2 {
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="checkbox"] {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin-bottom: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-input[type="checkbox"] {
-  width: auto;
-}
-
-button {
-  width: 100%;
-  padding: 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+.left-product img:hover{
+  border: 2px solid;
   cursor: pointer;
+  border-color: rgb(49, 53, 61);
 }
 
-button:hover {
-  background-color: #0056b3;
+.center-product img:hover{
+  border: 2px solid;
+  cursor: pointer;
+  border-color: rgb(49, 53, 61);
 }
 
-#order-summary {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-} */
+.right-product img:hover{
+  border: 2px solid;
+  cursor: pointer;
+  border-color: rgb(49, 53, 61);
+}
+
+
 
 
 @media(max-width:768px){
