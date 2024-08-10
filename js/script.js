@@ -1,5 +1,12 @@
 "user strict";
 
+const billing = document.querySelector("#same-as-billing");
+const shipping = document.querySelector("#shipping-info");
+
+billing.addEventListener("click", () => {
+  shipping.style.display = "none";
+});
+
 // document.addEventListener('DOMContentLoaded', () => {
 //     // Fetch product data from API
 //     fetch('https://api.example.com/products')

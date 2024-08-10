@@ -174,13 +174,105 @@ textarea {
   border-color: rgb(49, 53, 61);
 }
 
-.my-cart{
+.my-cart, .billing{
   width: 65%;
 }
 
-.summary{
+.summary, .payment{
   width: 30%;
 }
+
+.billing-div input{
+  border: 0px !important;
+  outline: 0px !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid rgb(80, 83, 90) !important;
+  padding-bottom: 3px !important;
+  margin-bottom: 10px !important;
+  width: 100%;
+}
+
+.checkbox{
+  width: auto!important;
+}
+
+.payment button {
+  color: white;
+  background-color: rgb(49, 53, 61);
+  cursor: pointer;
+  border: 0;
+  padding: 10px 40px;
+}
+
+.payment button:hover {
+  background-color: white;
+  color: rgb(49, 53, 61);
+  border: 2px solid;
+  border-color: rgb(49, 53, 61);
+}
+
+
+/* ////checkout */
+
+/* .container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="checkbox"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#order-summary {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+} */
 
 
 @media(max-width:768px){
@@ -202,6 +294,10 @@ textarea {
 
   .summary{
     width: 100%;
+  }
+
+  .billing-div h4{
+    font-size: 20px;
   }
 }
 
@@ -240,11 +336,23 @@ textarea {
 
   .image-price-div{
     flex-direction: column;
-    /* row-gap: 20px; */
   }
 
   .image-price{
     flex-direction: column;
+  }
+
+  .billing-div{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .billing{
+    width: 100%;
+  }
+
+  .payment{
+    width: 100%;
   }
 }
 
