@@ -112,11 +112,11 @@ textarea {
   background-color: rgb(40, 41, 46);
 }
 
-.feature .card {
+.feature img {
   cursor: pointer;
 }
 
-.feature .card:hover {
+.feature img:hover {
   scale: 1.06;
 }
 
@@ -146,12 +146,35 @@ textarea {
   scale: 0;
 }
 
+.feature{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.feature:nth-child(1) {
+  grid-column: 1 / 2;
+}
+
 .crow-div img:hover {
   border: 2px solid;
   cursor: pointer;
   border-color: rgb(49, 53, 61);
 }
 
+.crow-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.crow-div:nth-child(1) {
+  grid-column: 1 / 2;
+}
 /* Add to cart button */
 
 .add-cart button {
@@ -192,6 +215,27 @@ textarea {
   color: rgb(49, 53, 61);
   border: 2px solid;
   border-color: rgb(49, 53, 61);
+}
+
+.image-price-div img {
+  width: 50%;
+  height: 50%;
+}
+
+.image-price-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.image-price-div i{
+  font-size: 50px;
+}
+
+.image-price{
+  display: flex;
+  align-items: center;
 }
 
 /* cart and checkout styling */
@@ -238,6 +282,7 @@ textarea {
 /* Product styling */
 .item img {
   width: 50%;
+  height: 50%;
 }
 
 .categories {
@@ -304,21 +349,27 @@ textarea {
   }
 
   .categories {
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 15%;
   }
 
   .categories .item {
+    grid-column: 1 / 2;
+  }
+
+  .crow-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .crow-div .item {
     grid-column: 1 / 2;
   }
 }
 
 /* Mobile */
 @media (max-width: 500px) {
+  img{
+    width: 100%!important;
+  }
   .item-count {
     right: 10px;
     top: 207px;
@@ -376,4 +427,21 @@ textarea {
     flex-direction: column;
   }
 
+  .feature {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .feature .item {
+    grid-column: 1 / 2;
+  }
+
+  .image-price .image{
+    width: 100%!important;
+    text-align: center;
+  }
+
+  .image-price .name{
+    width: 100%!important;
+    text-align: center;
+  }
 }
