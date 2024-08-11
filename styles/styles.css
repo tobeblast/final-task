@@ -1,24 +1,24 @@
 /* General Styling */
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Lora", sans-serif;
 }
 
-section{
-  overflow-x: hidden!important;
+section {
+  overflow-x: hidden !important;
 }
 
-nav{
- background-color: rgb(49, 53, 61);
- position: fixed!important;
- top: 0;
- z-index: 1000;
- width: 100%;
+nav {
+  background-color: rgb(49, 53, 61);
+  position: fixed !important;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
-nav a{
+nav a {
   color: rgb(255, 255, 255) !important;
 }
 
@@ -26,11 +26,22 @@ nav a:hover {
   color: rgb(252, 188, 178) !important;
 }
 
-.logo{
+.item-count {
+  position: absolute;
+  top: 0;
+  right: 120px;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.logo {
   font-size: 60px;
 }
 
-nav ul{
+nav ul {
   margin-left: 18%;
 }
 
@@ -68,15 +79,15 @@ textarea {
 }
 
 /* Index Styling */
-.hero-div{
+.hero-div {
   background-color: rgb(40, 41, 46);
 }
 
-.hero{
+.hero {
   padding: 30px 25%;
 }
 
-.hero .text h1{
+.hero .text h1 {
   letter-spacing: 10px;
   font-weight: 100;
   font-size: 64px;
@@ -97,26 +108,26 @@ textarea {
   border-color: rgb(252, 188, 178);
 }
 
-.feature-div{
+.feature-div {
   background-color: rgb(40, 41, 46);
 }
 
-.feature .card{
+.feature .card {
   cursor: pointer;
 }
 
-.feature .card:hover{
+.feature .card:hover {
   scale: 1.06;
 }
 
-.best h1{
+.best h1 {
   letter-spacing: 10px;
   font-weight: 100;
   font-size: 30px;
   color: rgb(80, 83, 90);
 }
 
-.all button{
+.all button {
   color: white;
   background-color: rgb(49, 53, 61);
   cursor: pointer;
@@ -124,15 +135,21 @@ textarea {
   padding: 10px 40px;
 }
 
-.all button:hover{
+.all button:hover {
   background-color: white;
   color: rgb(49, 53, 61);
   border: 2px solid;
   border-color: rgb(49, 53, 61);
 }
 
-.best .card:hover{
+.best .card:hover {
   scale: 0;
+}
+
+.crow-div img:hover {
+  border: 2px solid;
+  cursor: pointer;
+  border-color: rgb(49, 53, 61);
 }
 
 /* Add to cart button */
@@ -153,21 +170,21 @@ textarea {
 }
 
 /* Cart styling */
-.cart h4{
+.cart h4 {
   font-weight: 200;
 }
 
-.add{
+.add {
   height: 30px;
 }
 
-.check-btn button{
+.check-btn button {
   color: white;
   background-color: rgb(49, 53, 61);
   cursor: pointer;
   border: 0;
   padding: 10px 40px;
-  width: 100%;    
+  width: 100%;
 }
 
 .check-btn button:hover {
@@ -178,16 +195,18 @@ textarea {
 }
 
 /* cart and checkout styling */
-.my-cart, .billing{
+.my-cart,
+.billing {
   width: 65%;
 }
 
-.summary, .payment{
+.summary,
+.payment {
   width: 30%;
 }
 
 /* checkout styling */
-.billing-div input{
+.billing-div input {
   border: 0px !important;
   outline: 0px !important;
   background-color: transparent !important;
@@ -197,8 +216,8 @@ textarea {
   width: 100%;
 }
 
-.checkbox{
-  width: auto!important;
+.checkbox {
+  width: auto !important;
 }
 
 .payment button {
@@ -217,105 +236,144 @@ textarea {
 }
 
 /* Product styling */
-.left-product img:hover{
-  border: 2px solid;
-  cursor: pointer;
-  border-color: rgb(49, 53, 61);
+.item img {
+  width: 50%;
 }
 
-.center-product img:hover{
-  border: 2px solid;
-  cursor: pointer;
-  border-color: rgb(49, 53, 61);
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15%;
 }
 
-.right-product img:hover{
-  border: 2px solid;
-  cursor: pointer;
-  border-color: rgb(49, 53, 61);
+.categories:nth-child(1) {
+  grid-column: 1 / 2;
 }
 
+#add-to-cart{
+  color: white;
+  background-color: rgb(49, 53, 61);
+  cursor: pointer;
+  border: 0;
+  padding: 10px 40px;
+}
 
+#add-to-cart:hover{
+  background-color: white;
+  color: rgb(49, 53, 61);
+  border: 2px solid;
+  border-color: rgb(49, 53, 61);        
+}
 
-
-@media(max-width:768px){
-
+/* Tablet */
+@media (max-width: 768px) {
   nav ul {
     margin-left: 0;
+  }
+
+  .item-count {
+    top: 210;
+    right: 36px;
   }
 
   .hero .text h1 {
     font-size: 30px;
   }
-  
-  .cart{
+
+  .cart {
     flex-direction: column;
   }
 
-  .my-cart{
+  .my-cart {
     width: 100%;
   }
 
-  .summary{
+  .summary {
     width: 100%;
   }
 
-  .billing-div h4{
+  .billing-div h4 {
     font-size: 20px;
+  }
+
+  .item img {
+    width: 100%;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15%;
+  }
+
+  .categories .item {
+    grid-column: 1 / 2;
   }
 }
 
-@media(max-width:500px){
-  .hero{
+/* Mobile */
+@media (max-width: 500px) {
+  .item-count {
+    right: 10px;
+    top: 207px;
+  }
+
+  .hero {
     flex-direction: column-reverse;
     padding-top: 0;
     row-gap: 20px;
   }
 
-  .hero .text{
-   width: 100%!important;
-   text-align: center;
-  }
-
-  .hero .image{
-   width: 100%!important;
-  }
-
-  .feature{
-    flex-direction: column;
-  }
-
-  .best{
+  .hero .text {
+    width: 100% !important;
     text-align: center;
   }
 
-  .categories .card{
-    width: 100%!important;
+  .hero .image {
+    width: 100% !important;
   }
 
-  .image-price-div{
+  .feature {
     flex-direction: column;
   }
 
-  .image-price{
+  .best {
+    text-align: center;
+  }
+
+  .categories .card {
+    width: 100% !important;
+  }
+
+  .image-price-div {
     flex-direction: column;
   }
 
-  .billing-div{
+  .image-price {
+    flex-direction: column;
+  }
+
+  .billing-div {
     flex-direction: column;
     justify-content: center;
   }
 
-  .billing{
+  .billing {
     width: 100%;
   }
 
-  .payment{
+  .payment {
     width: 100%;
   }
 
-  .product-div{
+  .crow-div {
     flex-direction: column;
   }
-}
 
+}

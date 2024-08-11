@@ -1,56 +1,39 @@
 "user strict";
 
-const billing = document.querySelector("#same-as-billing");
-const shipping = document.querySelector("#shipping-info");
+// const sameAsBilling = document.getElementById("same-as-billing");
+// const shippingInformation = document.getElementById("shipping-info");
 
-billing.addEventListener("click", () => {
-  shipping.style.display = "none";
-});
+// // sameAsBilling.addEventListener("click", function () {
+// //   shippingInformation.style.display = "none"
+// // })
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     // Fetch product data from API
-//     fetch('https://api.example.com/products')
-//         .then(response => response.json())
-//         .then(data => {
-//             populateFeaturedProducts(data);
-//             populateCategories(data);
-//         });
+//Displaying product on the product page
 
-//     // Add to Cart functionality
-//     const cart = [];
+fetch("https://fakestoreapi.com/products/")
+  .then((response) => response.json())
+  .then((data) => {
+    const container = document.querySelector(".categories");
 
-//     document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-//         const product = {
-//             title: document.getElementById('product-title').innerText,
-//             price: parseFloat(document.getElementById('product-price').innerText.replace('$', '')),
-//             quantity: 1
-//         };
-//         cart.push(product);
-//         updateCartCount();
-//     });
+    const mappedData = data.map((item) => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.innerHTML = `
+      <img src="${item.image}" alt=""/>
+      <h4>${item.title}</h4>
+      <p>${item.description}</p>
 
-//     function populateFeaturedProducts(products) {
-//         const featuredProductsContainer = document.getElementById('featured-products');
-//         products.forEach(product => {
-//             const productElement = document.createElement('div');
-//             productElement.classList.add('product');
-//             productElement.innerHTML = `
-//                 <img src="${product.image}" alt="${product.title}">
-//                 <h3>${product.title}</h3>
-//                 <p>$${product.price}</p>
-//                 <a href="product.html?id=${product.id}">View Product</a>
-//             `;
-//             featuredProductsContainer.appendChild(productElement);
-//         });
-//     }
+      <p>Price: $${item.price}</p>
+      <div class="">
+        <button id="add-to-cart">Add to Cart</button>
+      </div>
 
-//     function populateCategories(products) {
-//         const categoriesContainer = document.querySelector('.category-list');
-//         const categories = [...new Set(products.map(product => product.category))];
-//         categories.forEach(category => {
-//             const categoryElement = document.createElement('div');
-//             categoryElement.classList.add('category');
-//             categoryElement.innerHTML = `
-//                 <h4>${category}</h4>
-//             `;
-//             categories)
+    `;
+      return div;
+    });
+
+    // Append the items to the container
+    mappedData.forEach((element) => container.appendChild(element));
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });

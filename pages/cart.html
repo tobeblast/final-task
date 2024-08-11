@@ -85,13 +85,15 @@
                 aria-label="Search"
               />
               <a href="./cart.html">
-                <i class="fa-solid fa-cart-shopping fs-2"></i
-              ></a>
+                <i class="fa-solid fa-cart-shopping fs-2"> </i>
+                <span id="item-count" class="item-count">0</span>
+              </a>
             </form>
           </div>
         </div>
       </nav>
     </header>
+
     <!-- Main Section -->
     <main>
       <div class="cart container d-flex mt-5 justify-content-between">
@@ -111,16 +113,14 @@
                 <p>CROW LASHES - NATURAL VOLUME</p>
                 <p>$20.00</p>
               </div>
-
-              <div class=""></div>
             </div>
 
             <div
               class="add border border-1 border-secondary d-flex align-item-center justify-content-between gap-2 px-2 fs-5 mb-2"
             >
-              <i class="fa-solid fa-minus fs-6 mt-2"></i>
+              <i class="fa-solid fa-minus fs-6 mt-2 remove-item"></i>
               <p>2</p>
-              <i class="fa-solid fa-plus fs-6 mt-2"></i>
+              <i class="fa-solid fa-plus fs-6 mt-2 add-item"></i>
             </div>
             <!-- Total -->
             <div class="">
@@ -162,6 +162,7 @@
         </div>
       </div>
     </main>
+
     <!-- Footer Section -->
     <footer>
       <div class="container pt-5 mt-5">
